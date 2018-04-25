@@ -42,4 +42,5 @@ def hello_world(count):
     json_response = json.dumps(make_json(count, random_value))
     return json_response, 200
 
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
