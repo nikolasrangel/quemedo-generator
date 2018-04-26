@@ -26,13 +26,15 @@ como_ousas = {
     15: "Não vois quebrar. Não vois te quebrar seu dedo.",
     16: "Eu não preciso te provar nada, eu não preciso te provar, eu sou o filho do capeta e pronto.",
     17: "Tu não é nadas para mim, tu não é nadas. Tu é um zero a esquerda, tu é um velho, um velho de saia.",
-    18: "O que eu quero é espalhar a maldade.",
-    19: "Aqui está meu dedo. Quebre meu dedo com a força da mente!",
-    20: "Não vois quebrar. Não vois quebrar seu dedo.",
+    18: "[Você é] um vida torta. Um vida torta se fazendo de capetinha! Um lunático.",
+    19: "Tu tá me insultando seu padre filho da puta.",
+    20: "Eu quero ver você bebendo essa água benta.",
+    21: "Me dá logo essa água aqui.",
+    22: "FILHO DA PUTA!!!!!!!"
 }
 
 def make_json(count, index):
-    if(count == 8):
+    if(int(count) > 10):
         response = {
             'flag': True,
             'data': "https://www.wikihow.com/Stop-Procrastinating"
@@ -51,7 +53,8 @@ def static_file():
 
 @app.route("/prove/<count>")
 def hello_world(count):
-    random_value = randint(0, 20)
+    print(count)
+    random_value = randint(0, 22)
     json_response = json.dumps(make_json(count, random_value))
     return json_response, 200
 

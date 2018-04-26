@@ -1,5 +1,4 @@
 const URL   = 'prove/';
-const URL_REDIRECT = 'https://www.wikihow.com/Stop-Procrastinating';
 const label = document.getElementById('label');
 var count;
 
@@ -21,7 +20,7 @@ var getData = () => {
 
 var handleResponse = (data) => {
     if(data.flag){
-        window.location = URL_REDIRECT;
+        window.location = data.data;;
     }else
         label.innerText = data.data;
     count++;
