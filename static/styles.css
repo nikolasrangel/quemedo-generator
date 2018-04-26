@@ -1,0 +1,8 @@
+.label{    
+    font-size: 45px;
+    font-style: oblique;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
