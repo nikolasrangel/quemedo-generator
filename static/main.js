@@ -15,14 +15,11 @@ var getData = () => {
     fetch(URL + count)
     .then(response => response.json())
     .then(data => handleResponse(data))
-    .catch(err => console.error(err));
+    .catch(err => label.innerText = "?");
 }
 
 var handleResponse = (data) => {
-    if(data.flag){
-        window.location = data.data;;
-    }else
-        label.innerText = data.data;
+    data.flag ? window.location = data.data : label.innerText = data.data;
     count++;
 }
 

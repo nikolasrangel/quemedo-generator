@@ -1,8 +1,12 @@
 .label{    
-    font-size: 45px;
+    font-size: 50px;
     font-style: oblique;
-    height: 100vh;
+    height: 97vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.footer-right{
+    float: right;
 }
