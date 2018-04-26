@@ -1,8 +1,10 @@
 from flask import Flask
 from flask import json
+from flask_cors import CORS
 from random import randint
 
 app = Flask(__name__, static_url_path='/static')
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 como_ousas = {
     0: "a",
@@ -18,7 +20,7 @@ como_ousas = {
     10: "h",
 }
 
-def make_json(count, str):
+def make_json(count, index):
     if(count == 8):
         response = {
             'flag': True,
@@ -27,7 +29,7 @@ def make_json(count, str):
     else:
         response = {
             'flag': False,
-            'data': str
+            'data': como_ousas.get(index)
         }
     return response
 
