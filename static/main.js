@@ -3,11 +3,8 @@ const label = document.getElementById('label');
 var count;
 
 var init = () => {
-
     count = 0;
-
     label.addEventListener('click', () => getData());
-
 }
 
 
